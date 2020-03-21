@@ -3,7 +3,7 @@
 set -eux
 
 artifact="$(basename $1)"
-rust_target_folder="$(readlink -f $(dirname $1)/../..)"
+rust_target_folder="$(greadlink -f $(dirname $1)/../..)"
 
 case "${PLATFORM}" in
     "nrf52"|"nrf52840")
